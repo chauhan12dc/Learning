@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Learning.MainPage">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label  x:Name="{Binding currrentDate}" Text="hello" TextColor="Black" FontSize="Large"/>
+        <Button Text="{Binding currrentDate}" Clicked="Button_Clicked"/>
+        <BoxView BackgroundColor="Beige" BindingContext="{x:Reference Name=Slider}"  WidthRequest="{Binding Value}" HeightRequest="{Binding Value}" />
+        <Slider x:Name="Slider" Maximum="1500" HeightRequest="300" WidthRequest="300" MinimumTrackColor="Green" MaximumTrackColor="Red" ThumbColor="Black" />
+    </StackLayout>
+
+</ContentPage>
